@@ -225,7 +225,7 @@ If someone sends you a notification when you are offline, the database will save
 
 ## Pytests
 
-To make de project more scalable, eficient and clean, tests have been implemented. The auth, the articles manager and the roles had their own tests. Before running tests, create a new database only for tests in PostgresSQL called "content_api_test"
+To make de project more scalable, eficient and clean, tests have been implemented. The auth, the articles manager and the roles has their own tests. Before running tests, create a new database only for tests in PostgresSQL called "content_api_test"
 
 
 ### Run the tests
