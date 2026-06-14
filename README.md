@@ -6,7 +6,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A REST API for content management built with **FastAPI** and **SQLAlchemy 2.0**. Specs: tests with pytests, user authentication with JWT, roles system, clean architecture.
+A REST API for content management built with **FastAPI** and **SQLAlchemy 2.0**. Specs: tests with pytests, user authentication with JWT, roles system, clean architecture and a sistem of notifications with WebSockets.
 
 ---
 
@@ -158,11 +158,13 @@ Authorization: Bearer <your_token>
 
 ### 👤 Auth
 
-| Method | Endpoint | Description |
-|---|---|---|
-| `POST` | `/auth/register` | Register a new user |
-| `POST` | `/auth/login` | Login and get JWT token |
-| `PATCH` | `/auth/{user_id}/deactivate` | Deactivate a user |
+| Method | Endpoint | Description | Role |
+|---|---|---|---|
+| `POST` | `/auth/register` | Register a new user ||
+| `POST` | `/auth/login` | Login and get JWT token ||
+| `PATCH` | `/auth/{user_id}/deactivate` | Deactivate a user | ADMIN |
+| `PATCH` | `/auth/{user_id}/writer` | Reader to writer | ADMIN |
+| `PATCH` | `/auth/{user_id}/admin` | Reader or writer to admin | ADMIN |
 
 
 #### Register a user

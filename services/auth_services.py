@@ -37,3 +37,24 @@ def inactive_user(db: Session, user_id: str):
     user.is_active = False
     db.commit()
     return True
+
+def to_writer(db: Session, user_id: str):
+    user = db.get(User, user_id)
+    if not user:
+        return "NOT_FOUND"
+    if user.role == "READER":
+        user.role == "WRITER"
+        db.commit()
+        return True
+    return "INVALID_STATUS"
+
+
+def to_admin(db: Session, user_id: str):
+    user = db.get(User, user_id)
+    if not user:
+        return "NOT_FOUND"
+    if user.role == "ADMIN":
+        return "INVALID_STATUS"
+    user.role == "ADMIN"
+    db.commit()
+    return True

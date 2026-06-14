@@ -33,8 +33,30 @@ def test_deactivate_user(create_writer_admin_reader, client_admin):
 
     assert response.status_code == 200
 
+def test_new_writer(create_writer_admin_reader, client_admin):
+    user = create_writer_admin_reader["reader"]
+    user_id = user.user_id
 
-    
+    response = client_admin.patch(f"/auth/{user_id}/writer")
+
+    assert response.status_code == 200
+
+def test_new_admin(create_writer_admin_reader, client_admin):
+    user = create_writer_admin_reader["reader"]
+    user_id = user.user_id
+
+    response = client_admin.patch(f"/auth/{user_id}/admin")
+
+    assert response.status_code == 200
+
+def test_new_admin_bad_status(create_writer_admin_reader, client_admin):
+    user = create_writer_admin_reader["writer"]
+    user_id = user.user_id
+
+    response = client_admin.patch(f"/auth/{user_id}/writer")
+
+    assert response.status_code == 409
+
 
     
 
