@@ -61,7 +61,7 @@ CONTENT/
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ### 1. Clone the repository
 
@@ -124,7 +124,7 @@ The API will be available at `http://localhost:8000`. Interactive docs at `http:
 
 ---
 
-## 🔐 Authentication
+## Authentication
 
 
 
@@ -154,9 +154,9 @@ Authorization: Bearer <your_token>
 
 ---
 
-## 📋 Endpoints
+## Endpoints
 
-### 👤 Auth
+### Auth
 
 | Method | Endpoint | Description | Role |
 |---|---|---|---|
@@ -235,7 +235,7 @@ pytest tests/ -v
 ```
 
 
-## 🗄️ Database Models
+## Database Models
 
 ```
 User
@@ -288,7 +288,7 @@ Notification
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -303,6 +303,6 @@ Notification
 
 ---
 
-## 📄 License
+## License
 
 MIT License. Feel free to use and modify this project.
